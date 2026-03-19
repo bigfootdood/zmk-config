@@ -27,6 +27,7 @@
         Toggle_mouse {
             bindings = <&tog 3>;
             key-positions = <19 8 21>;
+            layers = <0>;
         };
     };
 
@@ -81,12 +82,12 @@
             >;
         };
 
-        layer_3 {
+        Mouse {
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans    &trans          &trans          &trans          &trans           &trans  &trans
-                        &trans     &trans     &trans    &trans          &trans          &trans
+                        &trans     &trans     &trans    &to 0           &mkp LCLK       &trans
             >;
         };
     };
