@@ -10,14 +10,14 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        hold_tap: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            bindings = <&mo>, <&kp>;
+    combos {
+        compatible = "zmk,combos";
 
-            #binding-cells = <2>;
-            tapping-term-ms = <0>;
+        Toggle_mouse: toggle_mouse {
+            timeout-ms = <50>;
+            key-positions = <19 8 21>;
+            layers = <0>;
+            bindings = <&tog 3>;
         };
     };
 
@@ -36,7 +36,7 @@
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y              &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H              &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N              &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp ENTER    &hold_tap 3 SPACE  &mo 2  &kp RALT
+                         &kp LGUI  &mo 1  &kp ENTER    &kp SPACE          &mo 2  &kp RALT
             >;
         };
 
@@ -77,7 +77,7 @@
 &trans  &trans  &trans  &trans     &trans     &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans    &trans          &trans          &trans          &trans           &trans  &trans
-                        &trans     &trans     &trans    &trans          &trans          &trans
+                        &trans     &trans     &trans    &to 0           &trans          &trans
             >;
         };
     };
