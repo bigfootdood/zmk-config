@@ -36,6 +36,14 @@
             layers = <0>;
             bindings = <&tog 4>;
         };
+
+        soft_off_combo: soft_off_combo {
+            timeout-ms = <200>;
+            require-prior-idle-ms = <500>;
+            slow-release;
+            key-positions = <5 6>;
+            bindings = <&soft_off>;
+        };
     };
 
     keymap {
