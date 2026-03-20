@@ -25,7 +25,7 @@
         compatible = "zmk,combos";
 
         Toggle_mouse {
-            bindings = <&tog 3>;
+            bindings = <&to 3>;
             key-positions = <19 8 21>;
             layers = <0>;
         };
