@@ -58,10 +58,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E        &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D        &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C        &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &td_gui_alt  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LEFT_GUI  &mo 1  &kp ENTER    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -76,7 +76,7 @@
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6         &kp N7          &kp N8          &kp N9        &kp N0     &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&kp LSHFT   &to 6         &trans        &trans        &trans        &trans          &kp PAGE_DOWN  &trans          &trans          &trans        &trans     &trans
+&kp LSHFT   &to 7         &trans        &trans        &trans        &trans          &kp PAGE_DOWN  &trans          &trans          &trans        &trans     &trans
                                         &kp LGUI      &trans        &kp RET         &kp SPACE      &trans          &kp RALT
             >;
         };
@@ -106,17 +106,17 @@
 
             display-name = "Alt";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LGUI   &kp A  &kp S  &kp D         &kp F  &kp G        &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &td_ctrl_alt  &mo 1  &kp ENTER    &lt 4 SPACE  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E             &kp R  &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LGUI   &kp A  &kp S  &kp D             &kp F  &kp G        &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C             &kp V  &kp B        &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LEFT_CONTROL  &mo 1  &kp ENTER    &lt 4 SPACE  &mo 2  &kp RALT
             >;
         };
 
         mouse_layer {
             display-name = "Mouse";
             bindings = <
-&to 6   &trans  &trans  &trans     &trans     &trans       &trans          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
+&to 7   &trans  &trans  &trans     &trans     &trans       &trans          &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans
 &trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans       &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans       &msc SCRL_DOWN  &trans          &trans          &trans           &trans  &trans
                         &trans     &mkp RCLK  &mkp LCLK    &to 0           &mkp LCLK       &mkp RCLK
@@ -133,9 +133,19 @@
             >;
         };
 
+        blender {
+            display-name = "blender";
+            bindings = <
+&kp GRAVE  &kp SLASH  &kp LS(GRAVE)  &kp LA(Z)    &kp R    &kp S           &kp LC(P)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp P     &kp BSPC
+&kp LCTRL  &kp LS(A)  &kp LS(S)      &kp LS(D)    &kp TAB  &kp G           &kp H      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SEMI  &kp SQT
+&kp LSHFT  &kp X      &kp Y          &kp Z        &kp E    &kp B           &kp N      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp FSLH  &kp ESC
+                                     &lt 0 LC(Z)  &mo 1    &kp LEFT_ALT    &kp ENTER  &kp KP_NUMBER_0  &kp RALT
+            >;
+        };
+
         layer_switcher {
             bindings = <
-&trans  &to 0   &to 3   &to 4   &to 5   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to 0   &to 3   &to 4   &to 5   &to 6     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
